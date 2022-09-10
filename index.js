@@ -17,7 +17,7 @@ app.get('/',async function (req, res) {
     // var websitelist = [""]
     var index = 0;
     let techlist = "";
-    
+    await writeMajors(auth, 'B1', 'RAW', "Category"); 
     // async function loop for each website
    for (const file of websitelist) {
       // await mainfunction(file,auth,index);
@@ -35,37 +35,7 @@ app.get('/',async function (req, res) {
     res.send('Hello World!');
 }); 
 
-app.get('/website',async function (req, res) {
-  await techextract("https://www.boat-lifestyle.com/");
-// var data = '';
-// var uri = 'http://www.puma.com';
-// var config = {
-//   method: 'get',
-//   url: `https://api.wappalyzer.com/v2/lookup/?urls=${uri}`,
-//   headers: { 
-//     'x-api-key': 'OVPkZRp7oX20ihsoezygq9Afv9PGarNIFA5rEdYb'
-//   },
-//   data : data
-// };
 
-// axios(config)
-// .then(function (response) {
-//   console.log(JSON.stringify(response.data));
-//   if(response.data[0].errors){
-//     res.send('Error');
-//   }
-//   else{
-//     var technologies = response.data[0].technologies;
-//     technologies.forEach(element => {
-//       console.log(JSON.stringify(element.name));
-//     });
-//     res.send("OK")
-//   }
-// })
-// .catch(function (error) {
-//   console.log(error);
-// });
-})
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');

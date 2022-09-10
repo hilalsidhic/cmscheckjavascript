@@ -13,7 +13,7 @@ async function writeMajors(auth ,range, valueInputOption, values1) {
     values,
   };
   const res = await sheets.spreadsheets.values.update({
-      spreadsheetId: '1WdUMkJVeYkgFt7uLy2_HuJ68EESmhXSokqhIHMCJzvw',
+      spreadsheetId: '1WdUMkJVeYkgFt7uLy2_HuJ68EESmhXSokqhIHMCJzvw', //provide the spreadsheet id
       range: range,
       valueInputOption: valueInputOption,
       resource: resource,
