@@ -9,7 +9,7 @@ async function techextract(urlPro){
     method: 'get',
     url: `https://api.wappalyzer.com/v2/lookup/?urls=${uri}`,
     headers: { 
-        'x-api-key': 'KMvWLlomuq8AsROzcq0XO4AIoP26jsXU5xA43XI4'
+        'x-api-key': 'KmtmhG5WM47TzwICseoTC53Fz3mRTiBT2pvK4dEc'   //Replace with wappalyzer api key
     },
     data : data
     };
@@ -47,7 +47,7 @@ async function techextract(urlPro){
     }
     })
     .catch(function (error) {
-        // console.log(error);
+        console.log(error);
     });
 }
 module.exports = techextract;

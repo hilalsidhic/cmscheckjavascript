@@ -4,7 +4,7 @@ async function listMajors(auth) {
   const sheets = google.sheets({version: 'v4', auth});
   const res = await sheets.spreadsheets.values.get({
       spreadsheetId: '1WdUMkJVeYkgFt7uLy2_HuJ68EESmhXSokqhIHMCJzvw', //provide the spreadsheet ID here
-      range: 'A2:A',
+      range: 'A2:A2',
   });
   const rows = res.data.values;
   if (!rows || rows.length === 0) {
